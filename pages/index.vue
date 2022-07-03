@@ -63,7 +63,6 @@ export default {
 
   methods: {
     input (payload) {
-      console.log(payload)
       this[payload.attribute] = payload.value
     },
     copySign () {
