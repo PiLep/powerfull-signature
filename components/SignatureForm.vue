@@ -55,6 +55,19 @@
 
     <b-field
       horizontal
+      label="Accroche"
+      custom-class="w-150px"
+    >
+      <b-input
+        :value="tagLine"
+        minlength="3"
+        maxlength="30"
+        @input="input({ attribute: 'tagLine', value: $event})"
+      />
+    </b-field>
+
+    <b-field
+      horizontal
       label="Logo Entreprise"
       custom-class="w-150px"
     >
@@ -89,6 +102,19 @@
         minlength="3"
         maxlength="255"
         @input="input({ attribute: 'email', value: $event})"
+      />
+    </b-field>
+
+    <b-field
+      horizontal
+      label="Téléphone"
+      custom-class="w-150px"
+    >
+      <b-input
+        :value="phone"
+        minlength="3"
+        maxlength="255"
+        @input="input({ attribute: 'phone', value: $event})"
       />
     </b-field>
 
@@ -164,51 +190,55 @@ export default {
   props: {
     name: {
       type: String,
-      required: true
+      default: null
     },
     imageSrc: {
       type: String,
-      required: true
+      default: null
     },
     role: {
       type: String,
-      required: true
+      default: null
     },
     companyName: {
       type: String,
-      required: true
+      default: null
     },
     companyImageSrc: {
       type: String,
-      required: true
+      default: null
     },
     companyWebsiteUrl: {
       type: String,
-      required: true
+      default: null
     },
     tagLine: {
       type: String,
-      required: true
+      default: null
     },
     email: {
       type: String,
-      required: true
+      default: null
+    },
+    phone: {
+      type: String,
+      default: null
     },
     websiteLibelle: {
       type: String,
-      required: true
+      default: null
     },
     placeUrl: {
       type: String,
-      required: true
+      default: null
     },
     placeLibelle: {
       type: String,
-      required: true
+      default: null
     },
     linkedInUrl: {
       type: String,
-      required: true
+      default: null
     }
   },
   data () {

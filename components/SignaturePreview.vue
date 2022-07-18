@@ -25,7 +25,17 @@
                   alt=""
                   style="margin-right: 10px;"
                 > <a :href="'mailto:'+email" style="color: black;">{{ email }}</a>
-              </p> <p v-if="companyWebsiteUrl && websiteLibelle" style="margin: 0px; font-size: 13px; line-height: 29px;">
+              </p>
+              <p v-if="phone" style="margin: 0px; font-size: 13px; line-height: 29px;">
+                <img
+                  src="https://reply.io/wp-content/uploads/signature-generator-phone.png"
+                  width="14"
+                  height="14"
+                  alt=""
+                  style="margin-right: 10px;"
+                > <a :href="'tel:'+phone" style="color: black;">{{ phone }}</a>
+              </p>
+              <p v-if="companyWebsiteUrl && websiteLibelle" style="margin: 0px; font-size: 13px; line-height: 29px;">
                 <img
                   src="https://reply.io/wp-content/uploads/signature-generator-website.png"
                   width="14"
@@ -33,7 +43,8 @@
                   alt=""
                   style="margin-right: 10px;"
                 > <a :href="companyWebsiteUrl" style="color: black;">{{ websiteLibelle }}</a>
-              </p> <p v-if="placeUrl && placeLibelle" style="margin: 0px; font-size: 13px; line-height: 29px;">
+              </p>
+              <p v-if="placeUrl && placeLibelle" style="margin: 0px; font-size: 13px; line-height: 29px;">
                 <img
                   src="https://reply.io/wp-content/uploads/signature-generator-location.png"
                   width="10"
@@ -93,6 +104,10 @@ export default {
       required: true
     },
     tagLine: {
+      type: String,
+      required: true
+    },
+    phone: {
       type: String,
       required: true
     },
