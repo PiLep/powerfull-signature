@@ -1,7 +1,7 @@
 <template>
   <div class="" style="padding: 50px;">
-    <div id="signature" ref="signatureEl" style="width: 560px; padding: 60px 0px;" @focus="$event.target.select()">
-      <table style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; width: 100%; padding-bottom: 24px; border-bottom: 1px solid rgb(231, 229, 247); border-collapse: separate;">
+    <div id="signature" ref="signatureEl" style="width: 560px; padding: 60px 0px;" :style="'color: '+textColor+';'" @focus="$event.target.select()">
+      <table style="font-family: Arial, sans-serif; width: 100%; padding-bottom: 24px; border-bottom: 1px solid rgb(231, 229, 247); border-collapse: separate;">
         <tbody>
           <tr>
             <td style="padding: 0px 20px 0px 0px; width: 140px;">
@@ -19,45 +19,45 @@
             </td> <td style="padding: 0px 0px 0px 40px; border-left: 1px solid rgb(231, 229, 247);">
               <p style="margin: 0px; font-size: 13px; line-height: 29px;">
                 <img
-                  src="https://reply.io/wp-content/uploads/signature-generator-email.png"
+                  :src="orangeIcon?'https://signature.kanta.fr/mail-orange.png':'https://reply.io/wp-content/uploads/signature-generator-email.png'"
                   width="14"
                   height="11"
                   alt=""
                   style="margin-right: 10px;"
-                > <a :href="'mailto:'+email" style="color: black;">{{ email }}</a>
+                > <a :href="'mailto:'+email" :style="'color: '+textColor+';'">{{ email }}</a>
               </p>
               <p v-if="phone" style="margin: 0px; font-size: 13px; line-height: 29px;">
                 <img
-                  src="https://reply.io/wp-content/uploads/signature-generator-phone.png"
+                  :src="orangeIcon?'https://signature.kanta.fr/phone-orange.png':'https://reply.io/wp-content/uploads/signature-generator-phone.png'"
                   width="14"
                   height="14"
                   alt=""
                   style="margin-right: 10px;"
-                > <a :href="'tel:'+phone" style="color: black;">{{ phone }}</a>
+                > <a :href="'tel:'+phone" :style="'color: '+textColor+';'">{{ phone }}</a>
               </p>
               <p v-if="companyWebsiteUrl && websiteLibelle" style="margin: 0px; font-size: 13px; line-height: 29px;">
                 <img
-                  src="https://reply.io/wp-content/uploads/signature-generator-website.png"
+                  :src="orangeIcon?'https://signature.kanta.fr/website-orange.png':'https://reply.io/wp-content/uploads/signature-generator-website.png'"
                   width="14"
                   height="14"
                   alt=""
                   style="margin-right: 10px;"
-                > <a :href="companyWebsiteUrl" style="color: black;">{{ websiteLibelle }}</a>
+                > <a :href="companyWebsiteUrl" :style="'color: '+textColor+';'">{{ websiteLibelle }}</a>
               </p>
               <p v-if="placeUrl && placeLibelle" style="margin: 0px; font-size: 13px; line-height: 29px;">
                 <img
-                  src="https://reply.io/wp-content/uploads/signature-generator-location.png"
+                  :src="orangeIcon?'https://signature.kanta.fr/location-orange.png':'https://reply.io/wp-content/uploads/signature-generator-location.png'"
                   width="10"
                   height="14"
                   alt=""
                   style="margin-right: 10px;"
-                > <a :href="placeUrl" style="color: black;">{{ placeLibelle }}</a>
+                > <a :href="placeUrl" :style="'color: '+textColor+';'">{{ placeLibelle }}</a>
               </p>
             </td>
           </tr>
         </tbody>
       </table>
-      <table style="color: rgb(0, 0, 0); font-family: Arial, sans-serif; width: 100%; padding-top: 24px; border-collapse: separate;">
+      <table style="font-family: Arial, sans-serif; width: 100%; padding-top: 24px; border-collapse: separate;">
         <tbody>
           <tr>
             <td style="padding: 0px;">
@@ -66,7 +66,7 @@
               </p>
             </td> <td style="padding: 0px; text-align: right;">
               <p style="margin: 0px;">
-                <a :href="linkedInUrl" style="display: inline-block; margin-right: 7px; font-size: 0px;"> <img src="https://cdn.cdnlogo.com/logos/l/78/linkedin-icon.svg" alt="" width="25" height="25" style="width: 25px;"></a>
+                <a :href="linkedInUrl" style="display: inline-block; margin-right: 7px; font-size: 0px;"> <img src="https://kanta.fr/assets/images/linkedin-logo-64.png" alt="" width="25" height="25" style="width: 25px;"></a>
               </p>
             </td>
           </tr>
@@ -129,6 +129,14 @@ export default {
     },
     linkedInUrl: {
       type: String,
+      required: true
+    },
+    textColor: {
+      type: String,
+      required: true
+    },
+    orangeIcon: {
+      type: Boolean,
       required: true
     }
   }

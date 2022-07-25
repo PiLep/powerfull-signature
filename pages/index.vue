@@ -17,6 +17,8 @@
           :place-libelle="placeLibelle"
           :linked-in-url="linkedInUrl"
           :tag-line="tagLine"
+          :text-color="textColor"
+          :icon-color="iconColor"
           @input="input"
         />
       </card>
@@ -38,6 +40,8 @@
           :place-libelle="placeLibelle"
           :linked-in-url="linkedInUrl"
           :tag-line="tagLine"
+          :text-color="textColor"
+          :orange-icon="orangeIcon"
         />
         <div class="card-footer pt-4">
           <b-field grouped position="is-right">
@@ -101,16 +105,18 @@ export default {
       placeUrl: null,
       linkedInUrl: null,
       tagLine: null,
+      textColor: null,
+      orangeIcon: null,
 
       attributeArray: [
-        'name', 'imageSrc', 'role', 'companyName', 'companyImageSrc', 'companyWebsiteUrl', 'email', 'phone', 'websiteLibelle', 'placeLibelle', 'placeUrl', 'linkedInUrl', 'tagLine'
+        'name', 'imageSrc', 'role', 'companyName', 'companyImageSrc', 'companyWebsiteUrl', 'email', 'phone', 'websiteLibelle', 'placeLibelle', 'placeUrl', 'linkedInUrl', 'tagLine', 'textColor', 'iconColor'
       ],
       defaultValues: {
         name: 'Nicolas Cage',
         imageSrc: 'https://www.placecage.com/g/120/120',
         role: 'Actor',
         companyName: 'Universal Pictures',
-        companyImageSrc: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/Universal-Pictures-Logo.svg',
+        companyImageSrc: 'https://kanta.fr/assets/images/logo-kanta-128.png',
         companyWebsiteUrl: 'https://www.universalpictures.fr/',
         email: 'nicolas@cage.com',
         phone: '06 12 45 25 65',
@@ -118,7 +124,9 @@ export default {
         placeLibelle: 'Hollywood',
         placeUrl: 'https://goo.gl/maps/yYVwG5EwDBgoAdNB9',
         linkedInUrl: 'https://www.linkedin.com/in/nicolas-cage-2344461aa/',
-        tagLine: 'I\'m Nicolas FRIGGIN\' Cage!'
+        tagLine: 'I\'m Nicolas FRIGGIN\' Cage!',
+        textColor: 'red',
+        orangeIcon: false
       }
     }
   },

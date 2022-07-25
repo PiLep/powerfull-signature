@@ -182,6 +182,22 @@
         @input="input({ attribute: 'companyWebsiteUrl', value: $event})"
       />
     </b-field>
+
+    <b-field
+      horizontal
+      label="Couleur Texte"
+      custom-class="w-150px"
+    >
+      <b-colorpicker :value="textColor" @input="input({ attribute: 'textColor', value: $event})" />
+    </b-field>
+
+    <b-field
+      horizontal
+      label="Icones orange"
+      custom-class="w-150px"
+    >
+      <b-switch :value="orangeIcon" @input="input({ attribute: 'orangeIcon', value: $event})" />
+    </b-field>
   </section>
 </template>
 
@@ -239,6 +255,14 @@ export default {
     linkedInUrl: {
       type: String,
       default: null
+    },
+    textColor: {
+      type: String,
+      required: true
+    },
+    orangeIcon: {
+      type: Boolean,
+      required: true
     }
   },
   data () {
