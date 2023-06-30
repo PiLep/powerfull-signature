@@ -113,10 +113,10 @@ export default {
       ],
       defaultValues: {
         name: 'Nicolas Cage',
-        imageSrc: 'https://www.placecage.com/g/120/120',
+        imageSrc: 'https://placebeard.it/120',
         role: 'Actor',
         companyName: 'Universal Pictures',
-        companyImageSrc: 'https://kanta.fr/assets/images/logo-kanta-128.png',
+        companyImageSrc: 'https://dummyimage.com/300x100/ccc/aaa',
         companyWebsiteUrl: 'https://www.universalpictures.fr/',
         email: 'nicolas@cage.com',
         phone: '06 12 45 25 65',
@@ -125,7 +125,7 @@ export default {
         placeUrl: 'https://goo.gl/maps/yYVwG5EwDBgoAdNB9',
         linkedInUrl: 'https://www.linkedin.com/in/nicolas-cage-2344461aa/',
         tagLine: 'I\'m Nicolas FRIGGIN\' Cage!',
-        textColor: 'red',
+        textColor: 'black',
         orangeIcon: false
       }
     }
