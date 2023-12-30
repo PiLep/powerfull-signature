@@ -190,14 +190,6 @@
     >
       <b-colorpicker :value="textColor" @input="input({ attribute: 'textColor', value: $event})" />
     </b-field>
-
-    <b-field
-      horizontal
-      label="Icones orange"
-      custom-class="w-150px"
-    >
-      <b-switch :value="orangeIcon" @input="input({ attribute: 'orangeIcon', value: $event})" />
-    </b-field>
   </section>
 </template>
 
@@ -258,10 +250,6 @@ export default {
     },
     textColor: {
       type: String,
-      required: true
-    },
-    orangeIcon: {
-      type: Boolean,
       required: true
     }
   },
