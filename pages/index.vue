@@ -41,7 +41,6 @@
           :linked-in-url="linkedInUrl"
           :tag-line="tagLine"
           :text-color="textColor"
-          :orange-icon="orangeIcon"
         />
         <div class="card-footer pt-4">
           <b-field grouped position="is-right">
@@ -106,7 +105,6 @@ export default {
       linkedInUrl: null,
       tagLine: null,
       textColor: null,
-      orangeIcon: null,
 
       attributeArray: [
         'name', 'imageSrc', 'role', 'companyName', 'companyImageSrc', 'companyWebsiteUrl', 'email', 'phone', 'websiteLibelle', 'placeLibelle', 'placeUrl', 'linkedInUrl', 'tagLine', 'textColor', 'iconColor'
@@ -125,8 +123,7 @@ export default {
         placeUrl: 'https://goo.gl/maps/yYVwG5EwDBgoAdNB9',
         linkedInUrl: 'https://www.linkedin.com/in/nicolas-cage-2344461aa/',
         tagLine: 'I\'m Nicolas FRIGGIN\' Cage!',
-        textColor: 'black',
-        orangeIcon: false
+        textColor: 'black'
       }
     }
   },
