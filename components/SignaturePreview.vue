@@ -18,40 +18,20 @@
               </p>
             </td> <td style="padding: 0px 0px 0px 40px; border-left: 1px solid rgb(231, 229, 247);">
               <p style="margin: 0px; font-size: 13px; line-height: 29px;">
-                <img
-                  :src="orangeIcon?'https://signature.kanta.fr/mail-orange.png':'https://reply.io/wp-content/uploads/signature-generator-email.png'"
-                  width="14"
-                  height="11"
-                  alt=""
-                  style="margin-right: 10px;"
-                > <a :href="'mailto:'+email" :style="'color: '+textColor+';'">{{ email }}</a>
+                📍
+                <a :href="'mailto:'+email" :style="'color: '+textColor+';'">{{ email }}</a>
               </p>
               <p v-if="phone" style="margin: 0px; font-size: 13px; line-height: 29px;">
-                <img
-                  :src="orangeIcon?'https://signature.kanta.fr/phone-orange.png':'https://reply.io/wp-content/uploads/signature-generator-phone.png'"
-                  width="14"
-                  height="14"
-                  alt=""
-                  style="margin-right: 10px;"
-                > <a :href="'tel:'+phone" :style="'color: '+textColor+';'">{{ phone }}</a>
+                📞
+                <a :href="'tel:'+phone" :style="'color: '+textColor+';'">{{ phone }}</a>
               </p>
               <p v-if="companyWebsiteUrl && websiteLibelle" style="margin: 0px; font-size: 13px; line-height: 29px;">
-                <img
-                  :src="orangeIcon?'https://signature.kanta.fr/website-orange.png':'https://reply.io/wp-content/uploads/signature-generator-website.png'"
-                  width="14"
-                  height="14"
-                  alt=""
-                  style="margin-right: 10px;"
-                > <a :href="companyWebsiteUrl" :style="'color: '+textColor+';'">{{ websiteLibelle }}</a>
+                🔗
+                <a :href="companyWebsiteUrl" :style="'color: '+textColor+';'">{{ websiteLibelle }}</a>
               </p>
               <p v-if="placeUrl && placeLibelle" style="margin: 0px; font-size: 13px; line-height: 29px;">
-                <img
-                  :src="orangeIcon?'https://signature.kanta.fr/location-orange.png':'https://reply.io/wp-content/uploads/signature-generator-location.png'"
-                  width="10"
-                  height="14"
-                  alt=""
-                  style="margin-right: 10px;"
-                > <a :href="placeUrl" :style="'color: '+textColor+';'">{{ placeLibelle }}</a>
+                🏢
+                <a :href="placeUrl" :style="'color: '+textColor+';'">{{ placeLibelle }}</a>
               </p>
             </td>
           </tr>
@@ -133,10 +113,6 @@ export default {
     },
     textColor: {
       type: String,
-      required: true
-    },
-    orangeIcon: {
-      type: Boolean,
       required: true
     }
   }
