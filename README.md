@@ -1,4 +1,5 @@
 # Powerfull signature generator 💌
+Project to generate signature html or copy paste it directly (into Gmail)
 
 ## Build Setup
 
